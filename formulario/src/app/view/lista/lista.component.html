@@ -1,0 +1,33 @@
+<!-- table.component.html -->
+<div class="container mt-5">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Tarefa</th>
+          <th>Início</th>
+          <th>Fim</th>
+          <th>Saldo</th>
+          <th>Extra</th>
+          <th>Atividade</th>
+          <th>Comentário</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks; let i = index" [ngClass]="{ 'last-row': i === tasks.length - 1 }">
+          <td>{{ task.tarefa }}</td>
+          <td>{{ task.inicio }}</td>
+          <td>{{ task.fim }}</td>
+          <td>{{ task.saldo }}</td>
+          <td>{{ task.extra }}</td>
+          <td>{{ task.atividade }}</td>
+          <td>{{ task.comentario }}</td>
+          <td>
+            <button class="btn btn-primary" *ngIf="i === tasks.length - 1" (click)="editTask(i)">Editar</button>
+            <button class="btn btn-danger" *ngIf="i === tasks.length - 1" (click)="deleteTask(i)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

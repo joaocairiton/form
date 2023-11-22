@@ -1,0 +1,37 @@
+<!-- form.component.html -->
+
+  <!-- form.component.html -->
+<div class="container mt-5">
+    <form #form="ngForm" (ngSubmit)="submitForm()">
+      <div class="mb-3">
+        <label for="tarefa" class="form-label">Tarefa:</label>
+        <input type="text" class="form-control" id="tarefa" name="tarefa" [(ngModel)]="task.tarefa" required>
+      </div>
+      <div class="mb-3">
+        <label for="inicio" class="form-label">Início:</label>
+        <input type="time" class="form-control" id="inicio" name="inicio" [(ngModel)]="task.inicio" (change)="calculateSaldo()" required>
+      </div>
+      <div class="mb-3">
+        <label for="fim" class="form-label">Fim:</label>
+        <input type="time" class="form-control" id="fim" name="fim" [(ngModel)]="task.fim" (change)="calculateSaldo()" required>
+      </div>
+      <div class="mb-3">
+        <label for="saldo" class="form-label">Saldo:</label>
+        <input type="text" class="form-control" id="saldo" name="saldo" [(ngModel)]="task.saldo" readonly>
+      </div>
+      <div class="mb-3">
+        <label for="extra" class="form-label">Extra:</label>
+        <input type="text" class="form-control" id="extra" name="extra" [(ngModel)]="task.extra">
+      </div>
+      <div class="mb-3">
+        <label for="atividade" class="form-label">Atividade:</label>
+        <input type="text" class="form-control" id="atividade" name="atividade" [(ngModel)]="task.atividade">
+      </div>
+      <div class="mb-3">
+        <label for="comentario" class="form-label">Comentário:</label>
+        <textarea class="form-control" id="comentario" name="comentario" [(ngModel)]="task.comentario"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+  </div>
+  
