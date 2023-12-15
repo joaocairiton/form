@@ -1,0 +1,37 @@
+<div class="header">
+    <div class="title-profile">
+        <div class="title">
+            <h1>Profile Admin</h1>
+            <p>Welcome</p>
+        </div>
+    </div>
+</div>
+
+<section class="container">
+
+    <div class="card">
+        <div class="image-container">
+            <img [src]="'/assets/users/admin.png'" alt="">
+        </div>
+        <div class="detail-container">
+            <div class="detail-top">
+                <h1>{{user.name}}</h1>
+                <p>{{user.email}}</p>
+            </div>      
+        </div>
+        <div class="divider"></div>
+        <div class="detail-container">
+            <div class="detail-bottom">
+                <label for="">User Name</label>
+                <h1>{{user.username}}</h1>
+                <label for="">Phone</label>
+                <p>{{user.telefone}}</p>
+            </div>      
+        </div>
+       
+
+    </div>
+
+</section>
+
+

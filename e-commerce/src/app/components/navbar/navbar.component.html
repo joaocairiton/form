@@ -1,0 +1,40 @@
+<div class="head" [ngClass]="getNavClass()">
+    <div class="head-content">
+            <div class="head-content-left">
+                <a class="text-nav" href="/">Ecommerce</a>
+            </div>
+        <div class="head-content-right">
+            <div class="head-menu">
+                <div class="menu-head-item">
+                    <a class="text-nav" href="/">Home</a>
+                </div>
+
+                <div class="menu-head-item">
+                    <a class="text-nav" [cdkMenuTriggerFor]="userOverlay">Sign-In</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #userOverlay>
+    <div class="overlay overlay-user overlay-fall" cdkMenu>
+        <ul>
+            <li *ngFor="let item of userItems" cdkMenuItem>
+                <a [routerLink]="'/login'">
+                    <i class="icon"  [ngClass]="item.iconL"></i>
+                    <span>{{item.labelLogin}}</span>
+                </a>
+                <a [routerLink]="'/register'">
+                    <i class="icon"  [ngClass]="item.iconR"></i>
+                    <span>{{item.labelRegister}}</span>
+                </a>
+                
+               
+
+            </li>
+        </ul>
+
+    </div>
+
+</ng-template>

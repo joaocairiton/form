@@ -1,0 +1,32 @@
+
+
+  <div class="container">
+    <div class="card welcome-card">
+        <div class="card-head welcome-head-container">
+            <div class="col-perfil-text">
+                <div class="title">Login</div>
+                <p class="subTitle">E-commerce</p>
+            </div>
+             <div class="col-perfil-img">
+                 <img [src]="'assets/profile-bg-3.png'" alt="">
+            </div>
+        </div>
+        <div class="card-body welcome-body-container">
+       
+  
+              <form (ngSubmit) = "formSubmit()"> 
+                <input [(ngModel)] = "loginData.username" name="username" type="text" placeholder="UserName" required>
+                <input [(ngModel)] = "loginData.password" name="password" type="password" placeholder="Password" required>
+                <input class="btn" type="submit" value="Login">
+              </form>
+                
+        
+        </div>
+  
+    </div>
+  </div>
+  
+
+
+
+

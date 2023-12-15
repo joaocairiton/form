@@ -1,0 +1,121 @@
+.head {
+    width: calc(100% - 5rem);
+    margin-left: 2rem;
+    z-index: 1;
+    transition: all .5s ease;
+    background: #f2c894;
+    padding: 1rem 1.5rem 0 1.5rem;
+    
+    position: fixed;
+    top: 0;
+    .head-content {
+        background: #733a19;
+        border-radius: 0.625rem;
+        box-shadow: 0px 0px 10px 0 rgb(34 41 47 / 10%);
+        padding: 0.813rem 1.563rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .head-content-left {
+            .text-nav{
+                font-weight: 500;
+                text-decoration: none;
+                font-size: 19px;
+                color: #eff2f3;
+            }
+
+        }
+
+        .head-content-right {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 19px;
+      
+            .head-menu {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: 1.25rem;
+               
+                    .menu-head-item{
+                        display: flex;
+                        align-items: center;
+                        height: 3rem;
+                        margin-left: 1rem;
+                        text-decoration: none;
+                        border-radius: 0.625rem;
+                        transition: all 0.3s ease;
+                        .text-nav{
+                            font-weight: 500;
+                            text-decoration: none;
+                            font-size: 19px;
+                            cursor: pointer;
+                            color: #eff2f3;
+                        }
+                           
+                    }
+            
+                }
+        }
+
+    }
+
+
+
+}
+.overlay {
+    background: #fff;
+    margin-top: 10px;
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 13%);
+    border-radius: 0.25rem;
+}
+
+.overlay-user {
+    ul{
+        padding: 0.5rem 0;
+        list-style: none;
+        width: 10rem;
+        li {
+            padding: 0.35rem 1.5rem;
+            font-size: 14px;
+            font-weight: 400;
+            color: #495057;
+            cursor: pointer;
+            .icon {
+                margin-right: 0.6rem;
+
+            }
+
+        }
+        li:hover{
+            background: #eff2f3;
+
+        }
+
+    }
+
+}
+
+.head-trimmed {
+    width: calc(100% - 16.5625rem);
+    margin-left: 16.5625rem;
+}
+.head-md-screen {
+    width: calc(100% - 5rem);
+    margin-left: 2rem;
+}
+
+@keyframes fall {
+
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+    
+}
+

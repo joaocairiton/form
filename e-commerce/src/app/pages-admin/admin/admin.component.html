@@ -1,0 +1,15 @@
+<!--<div class="admin" [ngClass]="getAdminClass()">
+   <app-body></app-body>
+    <router-outlet></router-outlet>
+</div>-->
+<app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+<app-header
+[collapsed]="isSideNavCollapsed"
+[screenWidth]="screenWidth"
+></app-header>
+<app-body
+    [collapsed]="isSideNavCollapsed"
+    [screenWidth]="screenWidth"
+></app-body>
+
+
