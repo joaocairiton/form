@@ -1,0 +1,41 @@
+/* popover-example.component.scss */
+.popover-trigger {
+    cursor: pointer;
+    display: inline-block;
+    position: relative; /* Importante para posicionar o popover corretamente */
+  }
+  
+  .popover {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    display: none;
+  }
+  
+  .popover.show {
+    display: block;
+  }
+  
+  .popover .arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  
+  .popover .arrow:before {
+    content: '';
+    border-width: 8px;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -16px;
+  }
+  
