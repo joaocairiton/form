@@ -1,1 +1,60 @@
-<app-formulario></app-formulario>
+<div class="container py-5">
+<form [formGroup]="myForm">
+  <label for="horaInicio">Hora Início:</label>
+  <input
+    #horaInicioInput
+    type="time"
+    id="horaInicio"
+    formControlName="horaInicio"
+    (keydown.ArrowRight)="focusOnHoraFim()"
+    (keydown.ArrowLeft)="focusOnHoraInicio()"
+    (change)="calcularIntervalo()"
+  >
+
+  <label for="horaFim">Hora Fim:</label>
+  <input
+    #horaFimInput
+    type="time"
+    id="horaFim"
+    formControlName="horaFim"
+    (keydown.ArrowDown)="focusOnInput()"
+    (keydown.ArrowLeft)="focusOnHoraFim()"
+    (change)="calcularIntervalo()"
+  >
+
+
+
+  <label for="intervalo">Intervalo:</label>
+  <input
+    type="text"
+    id="intervalo"
+    formControlName="intervalo"
+    readonly
+    (keydown.ArrowRight)="focusOnAdicionarIntervalo()"
+  >
+ 
+
+  <button type="button" (click)="adicionarIntervalo()">Adicionar Intervalo</button>
+
+  <div>
+    <label>Lista de Intervalos:</label>
+    <ul>
+      <li *ngFor="let intervalo of intervalos">{{ intervalo }}</li>
+    </ul>
+  </div>
+
+  <div>
+    <label>Total de Intervalos:</label>
+    <span>{{ totalIntervalos }}</span>
+  </div>
+
+<div>
+  <label>
+    <input type="checkbox" formControlName="isChecked"> Selecionado
+  </label>
+</div>
+
+  
+</form>
+
+</div>
