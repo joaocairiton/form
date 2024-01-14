@@ -1,0 +1,74 @@
+form input {
+    font-size: 15px;
+    
+}
+
+table th {
+  font-size: 14px;
+}
+table td {
+    font-size: 12px;
+  }
+
+  .table-btn {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+    .btn {
+        height: 30px;
+        width: 30px;
+        display: flex;
+    align-items: center;
+    justify-content:center;
+    }
+  }
+
+
+  
+@media screen and (max-width: 600px) {
+
+ 
+  table {
+    border: 0;
+    margin-top: 10px;
+
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+   
+  }
+
+  table tr {
+    border-bottom: 3px solid #e01212;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  table td {
+    border-bottom: 1px solid #dddddd;
+    display: block;
+    font-size: 12px;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+

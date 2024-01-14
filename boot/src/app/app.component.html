@@ -1,0 +1,147 @@
+<div class="container-fluid m-2">
+  <div class="row">
+    <div class="col-xl-3 shadow">
+      <form>
+        <div class="row">
+          <div class="form-group col-xl-12 col-md-6">
+            <label for="tarefa">Tarefa</label>
+            <select class="form-control" name="tarefa" id="tarefa">
+              <option value="1">Pessoa física</option>
+              <option value="2">Pessoa jurídica</option>
+            </select>
+          </div>
+
+          <div class="form-group col-xl-12 col-md-6">
+            <label for="atividade">Atividade</label>
+            <select class="form-control" name="atividade" id="atividade">
+              <option value="1">Pessoa física</option>
+              <option value="2">Pessoa jurídica</option>
+            </select>
+          </div>
+
+          <div class="form-group col-xl-4 col-md-4">
+            <label for="inicio">inicio</label>
+            <input type="time" class="form-control" name="inicio" id="inicio" />
+          </div>
+          <div class="form-group col-xl-4 col-md-4">
+            <label for="fim">fim</label>
+            <input type="time" class="form-control" name="fim" id="fim" />
+          </div>
+          <div class="form-group col-xl-4 col-md-4">
+            <label for="saldo">saldo</label>
+            <input type="text" class="form-control" name="saldo" id="saldo" />
+          </div>
+
+          <div class="form-group col-xl-12">
+            <label for="comentario">Comentario</label>
+            <textarea
+              class="form-control"
+              rows="3"
+              name="comentario"
+              id="comentario"
+            ></textarea>
+          </div>
+
+          <div class="col-md-12">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="extra"
+                id="extra"
+              />
+              <label class="form-check-label" for="extra">hora extra?</label>
+            </div>
+          </div>
+          <div class="col-md-12 mb-3">
+            <input type="submit" class="btn btn-primary mt-4" value="Salvar" />
+            <a href="#" class="btn btn-secondary mt-4 ml-2">Cancelar</a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-xl-9 p-2">
+      <div class="shadow table-responsive">
+        <table class="table table-striped  table-bordered">
+          <thead>
+            <tr>
+              <th class="col-1" scope="row">Tarefa</th>
+              <th class="col-1" scope="col">Atividade</th>
+              <th class="col-1" scope="col">hora inicio</th>
+              <th class="col-1" scope="col">hora fim</th>
+              <th class="col-1" scope="col">saldo</th>
+              <th class="col-1" scope="col">Hora Extra</th>
+              <th class="col-4" scope="col">comentario</th>
+              <th class="col-1" scope="col">ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="tarefa">151569</td>
+              <td data-label="atividade">16263</td>
+              <td data-label="inicio">07:00</td>
+              <td data-label="fim">10:00</td>
+              <td data-label="saldo">03:00</td>
+              <td data-label="extra">nao</td>
+              <td data-label="comentario">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi eius hic nobis ?
+              </td>
+              <td class="table-btn" data-label="ações">
+                <button class="btn btn-warning mr-2">
+                  <i class="fa-solid fa-edit"></i>
+                </button>
+                <button class="btn btn-danger">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="tarefa">151569</td>
+              <td data-label="atividade">16263</td>
+              <td data-label="inicio">07:00</td>
+              <td data-label="fim">10:00</td>
+              <td data-label="saldo">03:00</td>
+              <td data-label="extra">nao</td>
+              <td data-label="comentario">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi eius hic nobis ?
+              </td>
+              <td class="table-btn" data-label="ações">
+                <button class="btn btn-warning mr-2">
+                  <i class="fa-solid fa-edit"></i>
+                </button>
+                <button class="btn btn-danger">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td data-label="tarefa">151569</td>
+              <td data-label="atividade">16263</td>
+              <td data-label="inicio">07:00</td>
+              <td data-label="fim">10:00</td>
+              <td data-label="saldo">03:00</td>
+              <td data-label="extra">nao</td>
+              <td data-label="comentario">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi eius hic nobis ?
+              </td>
+              <td class="table-btn" data-label="ações">
+                <button class="btn btn-warning mr-2">
+                  <i class="fa-solid fa-edit"></i>
+                </button>
+                <button class="btn btn-danger">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
